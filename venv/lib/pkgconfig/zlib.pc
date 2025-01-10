@@ -1,0 +1,13 @@
+prefix=/Users/sidharthjain/Desktop/GenAI Projects/ML Project1/venv
+exec_prefix=/Users/sidharthjain/Desktop/GenAI Projects/ML Project1/venv
+libdir=/Users/sidharthjain/Desktop/GenAI Projects/ML Project1/venv/lib
+sharedlibdir=/Users/sidharthjain/Desktop/GenAI Projects/ML Project1/venv/lib
+includedir=/Users/sidharthjain/Desktop/GenAI Projects/ML Project1/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
