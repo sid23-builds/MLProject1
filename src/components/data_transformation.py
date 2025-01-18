@@ -57,7 +57,7 @@ class DataTransformation:
 
             logging.info("Categorical Columns encoding completed")
 
-            #Cinnecting the categorical and numerical pipeline
+            #Connecting the categorical and numerical pipeline
             preprocessor=ColumnTransformer(
                 [
                     ("num_pipeline", num_pipeline, numerical_columns),
@@ -93,6 +93,10 @@ class DataTransformation:
 
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df) 
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
+            # The fit(data) method is used to compute the mean and std dev for a given feature to be used further for scaling.
+            # The transform(data) method is used to perform scaling using mean and std dev calculated using the .fit() method.
+            # The fit_transform() method does both fits and transform.
+            #Here, the transform() method uses the already learnt parameters from fit_transform above for the data transformation.
 
             train_arr=np.c_[
                 input_feature_train_arr, np.array(target_feature_train_df)
