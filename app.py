@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from src.pipeline.prediction_pipeline import CustomData,PredictPipeline
 from src.exception import CustomException
 import sys
-
+ 
 application=Flask(__name__)
 
 app=application
